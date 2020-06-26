@@ -10,16 +10,27 @@ namespace AidImpactTraining.Controllers
     [Route("blog")]
     public class BlogController : Controller
     {
+        private readonly BlogDataContext _db;
+
+        public BlogController(BlogDataContext _db)
+        {
+            this._db = _db;
+        }
+
         [Route("")]
         public IActionResult Index()
         {
-            return View();
+            // retrieve all the posts and display them
+            var posts = _db.Posts.OrderByDescending(x => x.Posted).Take(5).ToArray();
+
+            return View(posts);
         }
 
-        [Route("{key:range(1, 31)}/{month:range(1,12)}/{year:min(1950)}")]
-        public IActionResult Post(int key, int month, int year)
+        [Route("{key}/{month:range(1,12)}/{year:min(1950)}")]
+        public IActionResult Post(string key, int month, int year)
         {
-            return new ContentResult { Content = $"Article créé le {key}/{month}/{year}" };
+            var post = _db.Posts.FirstOrDefault(x => x.Key == key);
+            return View(post);
         }
 
         [HttpGet, Route("create")]
@@ -39,8 +50,15 @@ namespace AidImpactTraining.Controllers
             post.Author = User.Identity.Name; // Better than unknown isn't it =)
             post.Posted = DateTime.Now;
 
-            // data base part
-            return View(post);
+            _db.Posts.Add(post);
+            _db.SaveChanges();
+
+            return RedirectToAction("Post", "Blog", new
+            {
+                year = post.Posted.Year,
+                month = post.Posted.Month,
+                key = post.Key
+            });
         }
     }
 }

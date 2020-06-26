@@ -64,3 +64,4 @@ C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\bin\Debug\netc
 C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\obj\Debug\netcoreapp3.1\AidImpactTraining.csproj.CoreCompileInputs.cache
 C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\obj\Debug\netcoreapp3.1\AidImpactTraining.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Post.cshtml.g.cs
