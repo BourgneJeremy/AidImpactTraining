@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AidImpactTraining", "AidImpactTraining\AidImpactTraining.csproj", "{74DFB6E1-3180-41A0-90D2-E42E0B55E6F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74DFB6E1-3180-41A0-90D2-E42E0B55E6F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74DFB6E1-3180-41A0-90D2-E42E0B55E6F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74DFB6E1-3180-41A0-90D2-E42E0B55E6F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74DFB6E1-3180-41A0-90D2-E42E0B55E6F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AA6ED2E6-FC2F-4BBD-8A78-477A3FFFD556}
+	EndGlobalSection
+EndGlobal
