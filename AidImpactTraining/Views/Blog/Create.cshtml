@@ -1,0 +1,39 @@
+﻿@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
+@model AidImpactTraining.Models.Post
+@{
+    Layout = "_Layout";
+}
+
+<section class="cta-section theme-bg-light py-5">
+    <div class="container text-center single-col-max-width">
+        <h2 class="heading">Créer un article</h2>
+        <div class="intro">
+            <p>Rentrez vos informations dans les champs ci-dessous</p>
+        </div>
+
+    </div><!--//container-->
+</section>
+
+<section class="cta-section theme-bg-light py-5">
+    <div class="container">
+        <fieldset>
+            <form asp-action="Create" asp-controller="Blog">
+                <div asp-validation-summary="ModelOnly"></div>
+
+                <p>
+                    <label asp-for="Title"></label>
+                    <input asp-for="Title" class="form-control" placeholder="Titre de l'article" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </p>
+                <p>
+                    <label asp-for="Body"></label>
+                    <textarea asp-for="Body" class="form-control" placeholder="Contenu de l'article"></textarea>
+                    <span asp-validation-for="Body" class="text-danger"></span>
+                </p>
+                <p>
+                    <button type="submit" class="btn btn-primary">Créer l'article</button>
+                </p>
+            </form>
+        </fieldset>
+    </div>
+</section>

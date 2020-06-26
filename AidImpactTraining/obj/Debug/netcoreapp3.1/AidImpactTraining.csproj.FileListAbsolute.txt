@@ -31,3 +31,4 @@ C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\obj\Debug\netc
 C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\obj\Debug\netcoreapp3.1\AidImpactTraining.csproj.CopyComplete
 C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\obj\Debug\netcoreapp3.1\Razor\Views\Blog\index.cshtml.g.cs
 C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Create.cshtml.g.cs

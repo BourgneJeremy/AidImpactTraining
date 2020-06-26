@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using AidImpactTraining.Model;
+using AidImpactTraining.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AidImpactTraining.Controllers
@@ -25,13 +25,22 @@ namespace AidImpactTraining.Controllers
         [HttpGet, Route("create")]
         public IActionResult Create()
         {
-            return new ContentResult { Content = "Create method" };
+            return View();
         }
 
         [HttpPost, Route("create")]
         public IActionResult Create(Post post)
         {
-            return new ContentResult { Content = $"id :" };
+            // If isn't valid get back to basic view
+            if (!ModelState.IsValid)
+                return View();
+
+            // Default values for author and date
+            post.Author = User.Identity.Name; // Better than unknown isn't it =)
+            post.Posted = DateTime.Now;
+
+            // data base part
+            return View(post);
         }
     }
 }
