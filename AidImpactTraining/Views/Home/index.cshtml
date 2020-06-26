@@ -1,0 +1,22 @@
+﻿@{ 
+    Layout = "_Layout";
+}
+
+<section class="about-me-section p-3 p-lg-5 theme-bg-light">
+    <div class="container">
+        <div class="profile-teaser media flex-column flex-lg-row">
+
+            <div class="media-body">
+                <h2 class="name font-weight-bold mb-1">Jérémy Bourgne</h2>
+                <div class="tagline mb-3">Développeur Logiciel Junior</div>
+                <div class="bio mb-4">
+                    Je suis développeur logiciel spécialisé dans le backend en alternance chez Studec. Je travaille quotidiennement avec les langages C# et JEE. Étant passionné par la programmation, je ne cesse de me former sur la conception de programmes et la logique algorithmique.
+                </div><!--//bio-->
+                <div class="mb-4">
+                    <a class="btn btn-primary mr-2 mb-3" href="@Url.Action("Index", "Blog")"><i class="fas fa-arrow-alt-circle-right mr-2"></i><span class="d-none d-md-inline">Voir le</span> Blog</a>
+                </div>
+            </div><!--//media-body-->
+            <img class="profile-image mb-3 mb-lg-0 ml-lg-5 mr-md-0" style="width: 15.5em; height: 24em;" src="assets/images/profile-lg.jpg" alt="">
+        </div>
+    </div>
+</section><!--//about-me-section-->

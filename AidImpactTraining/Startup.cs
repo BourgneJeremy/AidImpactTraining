@@ -24,6 +24,7 @@ namespace AidImpactTraining
 
         public void ConfigureServices(IServiceCollection services)
         {
+            // This portion of code is retrieve the configuration file called "appsettings.json" and use it to get the configuration data
             services.AddTransient<FeatureToggles>(feature => new FeatureToggles
             {
                 DeveloperExceptions = configuration.GetValue<bool>("FeatureToggles:DeveloperExceptions")
@@ -44,18 +45,19 @@ namespace AidImpactTraining
             if (features.DeveloperExceptions)
             {
                 app.UseDeveloperExceptionPage();
-            } 
+            }
 
             // Test the exception with a specific route (if it contains "invalid" for example)
             app.Use(async (context, next) =>
             {
                 if (context.Request.Path.Value.Contains("invalid"))
                 {
-                    throw new Exception("Erreur, ce chemin est invalide. Veuillez nous excuser");
+                    throw new Exception("Error, this path is invalid. Please try again.");
                 }
                 await next();
             });
 
+            // Set up the basic routing for MVC
             app.UseMvc(routes =>
             {
                 routes.MapRoute("Default",
