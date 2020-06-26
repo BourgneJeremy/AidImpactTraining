@@ -26,15 +26,8 @@ namespace AidImpactTraining
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseRouting();
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
-            });
+            // Allows me to show my server files in the "wwwroot" folder
+            app.UseFileServer();
         }
     }
 }
