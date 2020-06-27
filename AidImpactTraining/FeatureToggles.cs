@@ -7,6 +7,9 @@ namespace AidImpactTraining
 {
     public class FeatureToggles
     {
+        /// <summary>
+        /// Shows the developer exception page if it's true
+        /// </summary>
         public bool DeveloperExceptions { get; set; }
     }
 }

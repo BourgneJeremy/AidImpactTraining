@@ -9,11 +9,20 @@ namespace AidImpactTraining.Controllers
     public class HomeController : Controller
     {
         // Every method in a Controller class is an action
+
+        /// <summary>
+        /// Main page
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Index()
         {
             return View();
         }
 
+        /// <summary>
+        /// Error page
+        /// </summary>
+        /// <returns></returns>
         [Route("error")]
         public IActionResult Error()
         {

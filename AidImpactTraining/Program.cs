@@ -9,6 +9,9 @@ using Microsoft.Extensions.Logging;
 
 namespace AidImpactTraining
 {
+    /// <summary>
+    /// Launch the webapp
+    /// </summary>
     public class Program
     {
         public static void Main(string[] args)

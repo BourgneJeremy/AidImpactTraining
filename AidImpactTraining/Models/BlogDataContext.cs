@@ -10,6 +10,10 @@ namespace AidImpactTraining.Models
     {
         public DbSet<Post> Posts { get; set; }
 
+        /// <summary>
+        /// Context for Entity Framework database
+        /// </summary>
+        /// <param name="options"></param>
         public BlogDataContext(DbContextOptions<BlogDataContext> options)
             : base(options)
         {

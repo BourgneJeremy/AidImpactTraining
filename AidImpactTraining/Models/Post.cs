@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace AidImpactTraining.Models
 {
+    /// <summary>
+    /// Model for each post
+    /// </summary>
     public class Post
     {
         // Code allowing to define what Entity Framework needs

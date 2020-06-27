@@ -12,11 +12,19 @@ namespace AidImpactTraining.Controllers
     {
         private readonly BlogDataContext _db;
 
+        /// <summary>
+        /// Helps us to connect to the local database
+        /// </summary>
+        /// <param name="_db"></param>
         public BlogController(BlogDataContext _db)
         {
             this._db = _db;
         }
 
+        /// <summary>
+        /// Main blog route that displays the 5 last blog posts
+        /// </summary>
+        /// <returns></returns>
         [Route("")]
         public IActionResult Index()
         {
@@ -26,6 +34,14 @@ namespace AidImpactTraining.Controllers
             return View(posts);
         }
 
+        /// <summary>
+        /// Route that shows the post thanks to his name followed by the date
+        /// Example: "blog/elections-municipales-2020/6/2020"
+        /// </summary>
+        /// <param name="key">day</param>
+        /// <param name="month">month</param>
+        /// <param name="year">year</param>
+        /// <returns></returns>
         [Route("{key}/{month:range(1,12)}/{year:min(1950)}")]
         public IActionResult Post(string key, int month, int year)
         {
@@ -33,12 +49,21 @@ namespace AidImpactTraining.Controllers
             return View(post);
         }
 
+        /// <summary>
+        /// Shows the view to create the post
+        /// </summary>
+        /// <returns></returns>
         [HttpGet, Route("create")]
         public IActionResult Create()
         {
             return View();
         }
 
+        /// <summary>
+        /// Get the data from the post creation, saves it into the database and redirect the user to the post
+        /// </summary>
+        /// <param name="post"></param>
+        /// <returns></returns>
         [HttpPost, Route("create")]
         public IActionResult Create(Post post)
         {
