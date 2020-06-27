@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AidImpactTraining.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -72,6 +73,7 @@ namespace AidImpactTraining.Controllers
         /// Shows the view to create the post
         /// </summary>
         /// <returns></returns>
+        [Authorize]
         [HttpGet, Route("create")]
         public IActionResult Create()
         {
@@ -83,6 +85,7 @@ namespace AidImpactTraining.Controllers
         /// </summary>
         /// <param name="post"></param>
         /// <returns></returns>
+        [Authorize]
         [HttpPost, Route("create")]
         public IActionResult Create(Post post)
         {

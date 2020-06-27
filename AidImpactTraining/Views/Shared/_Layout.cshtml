@@ -46,14 +46,30 @@
 						<hr> 
 					</div><!--//profile-section-->
 					
-					<ul class="navbar-nav flex-column text-left">
-						<li class="nav-item">
-							<a class="nav-link" href="@Url.Action("Index", "Home")"><i class="fas fa-user fa-fw mr-2"></i>Profil</a>
+                    <ul class="navbar-nav flex-column text-left">
+                        <li class="nav-item">
+							@if (User.Identity.IsAuthenticated)
+                            {
+								<form id="logout" action="@Url.Action("Logout", "Account")" method="post">
+									<a class="nav-link" href="javascript: $('#logout').submit()">
+										Déconnexion
+										<br /><span>@User.Identity.Name</span>
+									</a>
+								</form>
+                            } else
+                            {
+								<a class="nav-link" href="@Url.Action("Login", "Account")" title="Se connecter">
+									Connexion
+								</a>
+                            }
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="@Url.Action("Index", "Blog")"><i class="far fa-newspaper fa-fw mr-2"></i>Blog</a>
-						</li>
-					</ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Index", "Home")"><i class="fas fa-user fa-fw mr-2"></i>Profil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Index", "Blog")"><i class="far fa-newspaper fa-fw mr-2"></i>Blog</a>
+                        </li>
+                    </ul>
 	
 					<div class="dark-mode-toggle text-center w-100">
 						<hr class="mb-4">

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AidImpactTraining.Models;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
@@ -42,6 +43,16 @@ namespace AidImpactTraining
                 options.UseSqlServer(connectionString);
             });
 
+            services.AddDbContext<IdentityDataContext>(options =>
+            {
+                var connectionString = configuration.GetConnectionString("IdentityDataContext");
+                options.UseSqlServer(connectionString);
+            });
+
+            // Add identity system
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<IdentityDataContext>();
+
             // I disabled the endpointRouting principally because I learned with the MVC methods for the routing. So that's why
             services.AddMvc(option => option.EnableEndpointRouting = false);
         }
@@ -68,6 +79,9 @@ namespace AidImpactTraining
                 }
                 await next();
             });
+
+            // Register the middleware for the identity
+            app.UseAuthentication();
 
             // Set up the basic routing for MVC
             app.UseMvc(routes =>

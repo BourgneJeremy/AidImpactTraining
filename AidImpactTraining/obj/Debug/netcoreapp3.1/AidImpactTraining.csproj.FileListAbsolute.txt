@@ -76,8 +76,15 @@ C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\bin\Debug\netc
 C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\bin\Debug\netcoreapp3.1\Renci.SshNet.dll
 C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\bin\Debug\netcoreapp3.1\SshNet.Security.Cryptography.dll
 C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
-C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\obj\Debug\netcoreapp3.1\AidImpactTraining.csproj.CoreCompileInputs.cache
-C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\obj\Debug\netcoreapp3.1\AidImpactTraining.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\obj\Debug\netcoreapp3.1\Razor\Views\Home\Error.cshtml.g.cs
 C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Post.cshtml.g.cs
 C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\obj\Debug\netcoreapp3.1\AidImpactTraining.csproj.CoreCompileInputs.cache
+C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\obj\Debug\netcoreapp3.1\AidImpactTraining.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
