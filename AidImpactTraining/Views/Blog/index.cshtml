@@ -1,4 +1,5 @@
-﻿@model IEnumerable<AidImpactTraining.Models.Post>
+﻿@inject AidImpactTraining.Models.FormattingService Format
+@model IEnumerable<AidImpactTraining.Models.Post>
 @{ Layout = "_Layout"; }
 
 <section class="cta-section theme-bg-light py-5">
@@ -6,7 +7,7 @@
         <h2 class="heading">Mon Blog</h2>
         <div class="intro">
             <p>Retrouvez mes 5 derniers articles réalisés via ASP.NET Core MVC</p>
-            <p>Date actuelle : @DateTime.Now</p>
+            <p>Date actuelle : @Format.AsReadableDate(DateTime.Now)</p>
         </div>
 
         <div>
@@ -20,12 +21,8 @@
     <section>
         <div class="blog-posts">
             @foreach (var post in Model)
-            {
-                @*The posts markup are the same in the index and post page, so we use reusable components*@
-
-                // The second parameter helps us to replace the model by the post
-                @await Html.PartialAsync("_Post", post)
-            }
+            {@*The posts markup are the same in the index and post page, so we use reusable components*@ // The second parameter helps us to replace the model by the post
+            @await Html.PartialAsync("_Post", post)            }
         </div>
         <div class="container"><hr></div>
     </section>

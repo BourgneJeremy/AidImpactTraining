@@ -26,6 +26,9 @@ namespace AidImpactTraining
 
         public void ConfigureServices(IServiceCollection services)
         {
+            // We register the FormattingService class
+            services.AddTransient<FormattingService>();
+
             // This portion of code is retrieve the configuration file called "appsettings.json" and use it to get the configuration data
             services.AddTransient<FeatureToggles>(feature => new FeatureToggles
             {
