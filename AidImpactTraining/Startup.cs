@@ -49,7 +49,7 @@ namespace AidImpactTraining
             IWebHostEnvironment env,
             FeatureToggles features)
         {
-            app.UseExceptionHandler("/error.html");
+            app.UseExceptionHandler("/error");
 
             if (features.DeveloperExceptions)
             {

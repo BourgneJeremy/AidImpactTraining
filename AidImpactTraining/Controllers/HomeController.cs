@@ -13,5 +13,11 @@ namespace AidImpactTraining.Controllers
         {
             return View();
         }
+
+        [Route("error")]
+        public IActionResult Error()
+        {
+            return View();
+        }
     }
 }
