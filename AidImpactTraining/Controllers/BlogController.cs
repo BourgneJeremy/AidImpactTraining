@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AidImpactTraining.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace AidImpactTraining.Controllers
 {
@@ -26,10 +27,25 @@ namespace AidImpactTraining.Controllers
         /// </summary>
         /// <returns></returns>
         [Route("")]
-        public IActionResult Index()
+        public IActionResult Index(int page = 0)
         {
-            // retrieve all the posts and display them
-            var posts = _db.Posts.OrderByDescending(x => x.Posted).Take(5).ToArray();
+            var pageSize = 2;
+            var totalPosts = _db.Posts.Count();
+            var totalPages = totalPosts / pageSize;
+            var previousPage = page - 1;
+            var nextPage = page + 1;
+
+            ViewBag.PreviousPage = previousPage;
+            ViewBag.HasPreviousPage = previousPage >= 0;
+            ViewBag.NextPage = nextPage;
+            ViewBag.HasNextPage = nextPage < totalPages;
+
+            var posts =
+                _db.Posts
+                    .OrderByDescending(x => x.Posted)
+                    .Skip(pageSize * page)
+                    .Take(pageSize)
+                    .ToArray();
 
             return View(posts);
         }

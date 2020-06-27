@@ -21,9 +21,24 @@
     <section>
         <div class="blog-posts">
             @foreach (var post in Model)
-            {@*The posts markup are the same in the index and post page, so we use reusable components*@ // The second parameter helps us to replace the model by the post
-            @await Html.PartialAsync("_Post", post)            }
+            {
+                @*The posts markup are the same in the index and post page, so we use reusable components*@ 
+                // The second parameter helps us to replace the model by the post
+                @await Html.PartialAsync("_Post", post)
+            }
         </div>
+        @if (ViewBag.HasPreviousPage)
+        {
+            <a class="btn btn-outline-secondary float-right mt-3 mb-3" href="@Url.Action("Index", "Blog", new { page = ViewBag.PreviousPage })">
+                Page précédente
+            </a>
+        }
+        else
+        {
+            <a class="btn btn-outline-secondary float-right mt-3 mb-3" href="@Url.Action("Index", "Blog", new { page = ViewBag.NextPage })">
+                Page suivante
+            </a>
+        }
         <div class="container"><hr></div>
     </section>
 </div>
