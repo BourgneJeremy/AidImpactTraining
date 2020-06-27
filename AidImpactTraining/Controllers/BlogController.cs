@@ -23,9 +23,9 @@ namespace AidImpactTraining.Controllers
         }
 
         /// <summary>
-        /// Main blog route that displays the 5 last blog posts
+        /// Main blog route that displays blog posts with paging functionnality
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The post</returns>
         [Route("")]
         public IActionResult Index(int page = 0)
         {
@@ -46,6 +46,9 @@ namespace AidImpactTraining.Controllers
                     .Skip(pageSize * page)
                     .Take(pageSize)
                     .ToArray();
+
+            if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+                return PartialView(posts);
 
             return View(posts);
         }

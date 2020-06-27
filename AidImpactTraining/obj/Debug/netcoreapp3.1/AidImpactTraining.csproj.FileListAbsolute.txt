@@ -80,3 +80,4 @@ C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\obj\Debug\netc
 C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\obj\Debug\netcoreapp3.1\AidImpactTraining.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\obj\Debug\netcoreapp3.1\Razor\Views\Home\Error.cshtml.g.cs
 C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Post.cshtml.g.cs
+C:\Users\Bourgne\source\repos\AidImpactTraining\AidImpactTraining\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
