@@ -2,17 +2,14 @@
 @{
     Layout = "_Layout";
 }
-
-<div class="container mb-5">
-    <article class="mt-5 mb-3">
-        <h1>@Model.Title</h1>
-        <div class="details">
-            Créé <span>@Model.Posted</span> par <span>@Model.Author</span>
-        </div>
-        <div class="content">
-            @Model.Body
-        </div>
-    </article>
     <div class="container"><hr></div>
-</div>
+    <div class="container">
+        @*The posts markup are the same in the index and post page, so we use reusable components*@
+        @await Html.PartialAsync("_Post")
+
+        <div class="mb-4">
+            <a class="btn btn-outline-secondary mr-2 mb-3" href="@Url.Action("Index", "Blog")"><i class="fas fa-backward mr-2"></i><span class="d-none d-md-inline">Retour</span></a>
+        </div>
+            <div class="container"><hr></div>
+    </div>
 
