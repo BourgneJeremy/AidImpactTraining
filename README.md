@@ -2,7 +2,7 @@
 A simple blog system created to improve my ASP.NET Core MVC knowledge and to prepare myself for the AidImpact technical challenge.
 
 # Web Application Demo
-To help through the installation, I made a simple YouTube demo for you : https://www.youtube.com/watch?v=MUTZXC0PReY&t=72s
+To help through the installation, I made a simple YouTube demo for you : https://www.youtube.com/watch?v=MUTZXC0PReY&t
 
 # Steps to follow
 Here are the 5 easy steps to make the web application work :
