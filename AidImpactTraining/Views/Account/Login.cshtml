@@ -5,40 +5,40 @@
 }
 
 <div class="container">
+    <div class="container"><hr></div>
     <fieldset class="account">
-
-    <h1>Login</h1>
+    <h1>Connexion</h1>
     <br />
     <form role="form" asp-action="Login">
 
-        <div asp-validation-summary="All" class="input-validation-error"></div>
+        <div asp-validation-summary="All" class="input-validation-error text-danger"></div>
     
         <div class="form-group">
             <label asp-for="EmailAddress"></label>
             <input type="email" asp-for="EmailAddress" class="form-control" />
-            <span asp-validation-for="EmailAddress" class="field-validation-error"></span>
+            <span asp-validation-for="EmailAddress" class="field-validation-error text-danger"></span>
         </div>
 
         <div class="form-group">
             <label asp-for="Password"></label>
             <input type="password" asp-for="Password" class="form-control" />
-            <span asp-validation-for="Password" class="field-validation-error"></span>
+            <span asp-validation-for="Password" class="field-validation-error text-danger"></span>
         </div>
 
         <div class="form-group">
             <label asp-for="ConfirmPassword"></label>
             <input type="password" asp-for="ConfirmPassword" class="form-control" />
-            <span asp-validation-for="ConfirmPassword" class="field-validation-error"></span>
+            <span asp-validation-for="ConfirmPassword" class="field-validation-error text-danger"></span>
         </div>
 
         <div class="form-group">
             <label asp-for="RememberMe"></label>
             <input type="checkbox" asp-for="RememberMe" />
-            <span asp-validation-for="RememberMe" class="field-validation-error"></span>
+            <span asp-validation-for="RememberMe" class="field-validation-error text-danger"></span>
         </div>
         <div>
             <label>&nbsp;</label>
-            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="submit" class="btn btn-primary">Connexion</button>
         </div>
 
     </form>
@@ -46,8 +46,8 @@
     <br />
 
     <div class="form-group">
-        <label>Not Registered?</label>
-        <a asp-action="Register">Create a new account</a>
+        <label>Pas encore enregistré ?</label>
+        <a asp-action="Register">Créez un nouveau compte.</a>
     </div>
 
 </fieldset>

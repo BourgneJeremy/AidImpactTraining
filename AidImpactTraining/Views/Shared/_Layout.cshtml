@@ -43,28 +43,31 @@
 						<img class="profile-image mb-3 rounded mx-auto" src="/assets/images/profile.png" alt="image" >			
 						
 						<div class="bio mb-3">Système de blog en ASP.NET Core MVC</div><!--//bio-->
+							<ul class="navbar-nav flex-column text-left">
+								<li class="nav-item text-center">
+									@if (User.Identity.IsAuthenticated)
+									{
+										<form id="logout" action="@Url.Action("Logout", "Account")" method="post">
+											<a class="nav-link" href="javascript: $('#logout').submit()">
+												<i class="fas fa-user-slash fa-fw mr-2"></i>Déconnexion
+												<br /><span>@User.Identity.Name</span>
+											</a>
+										</form>
+									}
+									else
+									{
+										<a class="nav-link" href="@Url.Action("Login", "Account")" title="Se connecter">
+											<i class="fas fa-user fa-fw mr-2"></i>Se connecter
+										</a>
+									}
+								</li>
+							</ul>
 						<hr> 
 					</div><!--//profile-section-->
-					
+
                     <ul class="navbar-nav flex-column text-left">
                         <li class="nav-item">
-							@if (User.Identity.IsAuthenticated)
-                            {
-								<form id="logout" action="@Url.Action("Logout", "Account")" method="post">
-									<a class="nav-link" href="javascript: $('#logout').submit()">
-										Déconnexion
-										<br /><span>@User.Identity.Name</span>
-									</a>
-								</form>
-                            } else
-                            {
-								<a class="nav-link" href="@Url.Action("Login", "Account")" title="Se connecter">
-									Connexion
-								</a>
-                            }
-						</li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="@Url.Action("Index", "Home")"><i class="fas fa-user fa-fw mr-2"></i>Profil</a>
+                            <a class="nav-link" href="@Url.Action("Index", "Home")"><i class="fas fa-home fa-fw mr-2"></i>Accueil</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="@Url.Action("Index", "Blog")"><i class="far fa-newspaper fa-fw mr-2"></i>Blog</a>

@@ -8,7 +8,7 @@
                                     )
     </h1>
     <div class="details">
-        Créé le <span>@Format.AsReadableDate(Model.Posted)</span> par <span>@Model.Author</span>
+        Créé le <span>@Format.AsReadableDate(Model.Posted)</span> par <span>@User.Identity.Name</span>
     </div>
     <div class="content">
         @Model.Body
