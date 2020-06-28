@@ -12,7 +12,7 @@ Here are the 5 easy steps to make the web application work :
 Finally, you'll see the web application open itself into a new web window!
 If it doesn't work for you, please contact me on my email "jeremy.bourgne.louis@gmail.com" or on my following website contact page "http://bourgne-jeremy.fr/contact.php", I'll be there to help you.
 
-# Main featyres
+# Main features
 Here are some of the main functionnalities:
   - Registration, login and logout system
   - Blog system in which you can add blog posts only when you're connected
